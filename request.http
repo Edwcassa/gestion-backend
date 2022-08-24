@@ -1,34 +1,30 @@
 ###
-POST http://localhost:9000/api/docentes HTTP/1.1
+POST http://localhost:9000/api/cursos
 Content-Type: application/json
 
 {
-  "codDocente": "mark",
-  "email": "mark@email",
-  "contrasenia": "a",
-  "nombre": "a",
-  "apellido": "q",
-  "sexo": "m",
-  "esAdmin": true,
-  "categoria": "o",
-  "telefono": "5"
+  "codigo": "iff",
+  "nombre": "MINooooooooooooooooooS ",
+  "tipo": "teórico",
+  "categoria": "EEEP",
+  "grupo": "A",
+  "creditos": 4
 }
 
 
 ###
-GET http://localhost:9000/api/docentes HTTP/1.1
+GET http://localhost:9000/api/cursos HTTP/1.1
 
 ###
-GET http://localhost:9000/api/docentes/630510a745a70fafb2e1b039
+GET http://localhost:9000/api/cursos/63055d2402a85f30145412e0
 
 ###
-PUT http://localhost:9000/api/docentes/63050e2945a70fafb2e1b027
+PUT http://localhost:9000/api/cursos/63055d2402a85f30145412e0
 Content-Type: application/json
 
 {
-  "email": "a"
+  "grupo": "A"
 }
 
 ###
-DELETE http://localhost:9000/api/docentes/630510a745a70fafb2e1b039
-
+DELETE http://localhost:9000/api/cursos/63055e57844563c2dff64197

@@ -4,6 +4,7 @@ const cors = require('cors');
 
 const { dbConnection } = require("./database/config");
 const docenteRoute = require("./routes/docente");
+const cursoRoute = require("./routes/curso");
 
 // settings
 const app = express();
@@ -13,6 +14,7 @@ const port = process.env.PORT || 9000;
 app.use(cors());
 app.use(express.json());
 app.use("/api", docenteRoute);
+app.use("/api", cursoRoute);
 
 // routes
 app.get("/", (req, res) => {
