@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const dbConnection = async () => {
-  await mongoose.connect("mongodb://mongo:uVMpZRCfY6UtXELs3kbg@containers-us-west-27.railway.app:5487", {
+  await mongoose.connect("mongodb://mongo:cbTeOCVXejkXCnJJQfnJ@containers-us-west-85.railway.app:7994", {
     useNewUrlParser: true,
     useUnifiedTopology: true
   }).then(() => {
