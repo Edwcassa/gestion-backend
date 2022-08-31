@@ -1,27 +1,8 @@
 ###
-POST http://localhost:9000/api/matriculas
+POST http://localhost:9000/api/login
 Content-Type: application/json
 
 {
-  "usuario": "630900a73e95b8058dbedbac",
-  "curso": "630901033e95b8058dbedbaf"
+  "email": "mark@unsaac.edu",
+  "password": "mark"
 }
-
-###
-GET http://localhost:9000/api/matriculas HTTP/1.1
-
-###
-GET http://localhost:9000/api/matriculas/63055d2402a85f30145412e0
-
-###
-PUT http://localhost:9000/api/matriculas/630901813e95b8058dbedbbf
-Content-Type: application/json
-
-{
-  "usuario": "6309235c3ee299d6e7ea1fd9",
-  "curso": "630925ca1b35ed869233edc6"
-}
-
-###
-DELETE http://localhost:9000/api/matriculas/630901813e95b8058dbedbbf
-
