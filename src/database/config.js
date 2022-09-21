@@ -8,7 +8,8 @@ const dbConnection = async () => {
   }).then(() => {
     console.log('conectado a base de datos')
   }).catch(err => {
-    console.error(err)
+     console.error(err)
+     console.log('error al conectar con la base de datos')
   })
 }
 module.exports = {
