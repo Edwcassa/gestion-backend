@@ -4,11 +4,11 @@ const options = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "Gestion Academica API Docs", 
+      title: "Gestión académica", 
       version: '1.0.0',
     }
   },
-  apis: ["./src/routes/*.js", "./src/models/*.js"],
+  apis: ["./src/routes/*.js", "./src/models/*.js", "./src/controllers/*.js"],
 };
 
 const swaggerDocs = swaggerJsdoc(options);

@@ -1,5 +1,19 @@
 const cursoSchema = require('../models/curso')
 
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     CursoListResponse:
+ *       type: object
+ *       properties:
+ *         ok:
+ *           type: boolean
+ *         cursos:
+ *           type: array
+ *           items:
+ *             $ref: '#/components/schemas/Curso'
+ */
 const getAllCourses = async (req, res) => {
   try {
     const allCursos = await cursoSchema.find()
@@ -16,6 +30,20 @@ const getAllCourses = async (req, res) => {
   }
 }
 
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     CursoResponse:
+ *       type: object
+ *       properties:
+ *         ok:
+ *           type: boolean
+ *         curso:
+ *           $ref: '#/components/schemas/Curso'
+ *             
+ */
 const getCourseById = async (req, res) => {
   const uid = req.params.id
   try {
@@ -34,6 +62,20 @@ const getCourseById = async (req, res) => {
   }
 }
 
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     CursoResponse:
+ *       type: object
+ *       properties:
+ *         ok:
+ *           type: boolean
+ *         curso:
+ *           $ref: '#/components/schemas/Curso'
+ *             
+ */
 const createCourse = async (req, res) => {
   try {
     const newCurso = new cursoSchema(req.body)
@@ -51,6 +93,20 @@ const createCourse = async (req, res) => {
   }
 }
 
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     CursoResponse:
+ *       type: object
+ *       properties:
+ *         ok:
+ *           type: boolean
+ *         curso:
+ *           $ref: '#/components/schemas/Curso'
+ *             
+ */
 const updateCourse = async (req, res) => {
   const uid = req.params.id
   const upCurso = req.body
@@ -69,6 +125,20 @@ const updateCourse = async (req, res) => {
   }
 }
 
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     CursoDeleteResponse:
+ *       type: object
+ *       properties:
+ *         ok:
+ *           type: boolean
+ *         msg:
+ *           type: string
+ *             
+ */
 const deleteCourse = async (req, res) => {
   const uid = req.params.id
   try {
