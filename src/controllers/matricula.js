@@ -2,6 +2,20 @@ const matriculaSchema = require('../models/matricula')
 const cursoSchema = require('../models/curso')
 const docenteSchema = require('../models/docente')
 
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     MatriculaListResponse:
+ *       type: object
+ *       properties:
+ *         ok:
+ *           type: boolean
+ *         matriculas:
+ *           type: array
+ *           items:
+ *             $ref: '#/components/schemas/Matricula'
+ */
 const getAllMatriculas = async (req, res) => {
   try {
     const allMatriculas = await matriculaSchema.find()
@@ -21,6 +35,20 @@ const getAllMatriculas = async (req, res) => {
   }
 }
 
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     MatriculaResponse:
+ *       type: object
+ *       properties:
+ *         ok:
+ *           type: boolean
+ *         matricula:
+ *           $ref: '#/components/schemas/Matricula'
+ *             
+ */
 const getMatriculaById = async (req, res) => {
   const uid = req.params.id
   try {
@@ -39,6 +67,20 @@ const getMatriculaById = async (req, res) => {
   }
 }
 
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     MatriculaResponse:
+ *       type: object
+ *       properties:
+ *         ok:
+ *           type: boolean
+ *         matricula:
+ *           $ref: '#/components/schemas/Matricula'
+ *             
+ */
 const createMatricula = async (req, res) => {
   try {
     const curso = await cursoSchema.findById(req.body.curso)
@@ -61,6 +103,20 @@ const createMatricula = async (req, res) => {
   }
 }
 
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     MatriculaResponse:
+ *       type: object
+ *       properties:
+ *         ok:
+ *           type: boolean
+ *         matricula:
+ *           $ref: '#/components/schemas/Matricula'
+ *             
+ */
 const updateMatricula = async (req, res) => {
   const uid = req.params.id
 
@@ -85,6 +141,20 @@ const updateMatricula = async (req, res) => {
   }
 }
 
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     MatriculaDeleteResponse:
+ *       type: object
+ *       properties:
+ *         ok:
+ *           type: boolean
+ *         msg:
+ *           type: string
+ *             
+ */
 const deleteMatricula = async (req, res) => {
   const uid = req.params.id
   try {

@@ -1,5 +1,25 @@
 const { Schema, model } = require('mongoose')
 
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     Matricula:
+ *       type: object
+ *       properties:
+ *         usuario:
+ *           type: object
+ *           properties:
+ *             _id:
+ *               type: string
+ *             nombre:
+ *               type: string
+ *             apellido:
+ *               type: string
+ *         curso:
+ *           $ref: '#/components/schemas/Curso'
+ */
+
 const matriculaSchema = Schema({
   usuario: {
     type: Schema.Types.ObjectId,

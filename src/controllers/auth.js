@@ -36,3 +36,49 @@ const login = async (req, res) => {
 module.exports = {
   login
 }
+
+/**
+ * @swagger
+ * /api/login/:
+ *   post:
+ *     summary: Login de un docente
+ *     description: Login de un docente
+ *     tags:
+ *       - Login
+ *     requestBody:
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/LoginModel'
+ *     responses:
+ *       '200':
+ *          description: Operación exitosa
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                  email:
+ *                    type: string
+ *                  password:
+ *                    type: string
+ *       '500':
+ *           description: Bad Request
+ *           content:
+ *             application/json:
+ *               schema:
+ *               $ref: '#/components/schemas/ErrorResult'
+ */
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     LoginModel:
+ *       type: object
+ *       properties:
+ *         email:
+ *           type: string
+ *         password:
+ *           type: string
+ */

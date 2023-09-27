@@ -41,7 +41,7 @@ router.get("/cursos/:id", controller.getCourseById);
  *      parameters:
  *        - name: id
  *          in: path
- *          description: ID del docente
+ *          description: ID del curso
  *          required: true
  *          schema:
  *            type: string
@@ -81,12 +81,7 @@ router.post('/cursos', controller.createCourse);
  *         content:  
  *           application/json:
  *             schema:
- *               type: object
- *               properties:
- *                ok:
- *                  type: boolean
- *                docente:
- *                  $ref: '#/components/schemas/CursoResponse'
+ *               $ref: '#/components/schemas/CursoResponse'
  *       '500':
  *         description: Bad Request
  *         content:
@@ -108,7 +103,7 @@ router.put('/cursos/:id', controller.updateCourse);
  *     parameters:
  *       - name: id
  *         in: path
- *         description: ID del docente
+ *         description: ID del curso
  *         required: true
  *         schema:
  *           type: string
@@ -123,12 +118,7 @@ router.put('/cursos/:id', controller.updateCourse);
  *         content:  
  *           application/json:
  *             schema:
- *               type: object
- *               properties:
- *                ok:
- *                  type: boolean
- *                docente:
- *                  $ref: '#/components/schemas/CursoResponse'
+ *               $ref: '#/components/schemas/CursoResponse'
  *       '500':
  *         description: Bad Request
  *         content:
@@ -150,7 +140,7 @@ router.delete('/cursos/:id', controller.deleteCourse);
  *     parameters:
  *       - name: id
  *         in: path
- *         description: ID del docente
+ *         description: ID del curso
  *         required: true
  *         schema:
  *           type: string
